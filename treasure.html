@@ -14,15 +14,15 @@
 
 <style>
 
-.points {
+.score {
       display: flex;  flex-direction:row;
-      background-color:teal;
+      background-color: rgba(206, 21, 76, 0.884);
   }
 
 
 
-.points > div {  /*div children of the flex container*/
-  background-color: #f2f2f2f1f1; 
+.score > div {  /*div children of the flex container*/
+  background-color: #f1f2f1; 
   margin: 20px;  padding: 20px;  font-size: 20px;
   width: 550px;
 }
@@ -31,7 +31,7 @@
 @media (max-width: 600px) { 
 	 .flex-container{
 		 flex-direction:column;
-		 background-color: yellowgreen;
+		 background-color: rgb(154, 163, 154);
 	  }
 	}
 </style>
@@ -44,7 +44,7 @@
     <h1 style="text-align: center;">Find the Treasure Amulya Baddam</h1>
 </br>
     <div style="text-align: center;">Click on the squares to find the treasure</div></br>
-    <div class="container points">
+    <div class="container score">
     <div id="clicks">Number of clicks is zero.</div>
     <div id="distance">Distance is unknown.</div>
 </div>
@@ -52,124 +52,103 @@
 
 <div class = "container">
     <div class ="row container">
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "0" onclick="makeGuess(0)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "1" onclick="makeGuess(1)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "2" onclick="makeGuess(2)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "3" onclick="makeGuess(3)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "4" onclick="makeGuess(4)" width="200" height ="200"></div>
     </div>
     <div class ="row container">
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "5" onclick="makeGuess(5)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "6" onclick="makeGuess(6)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "7" onclick="makeGuess(7)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "8" onclick="makeGuess(8)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "9" onclick="makeGuess(9)" width="200" height ="200"></div>
     </div>
     <div class ="row container">
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "10" onclick="makeGuess(10)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "11" onclick="makeGuess(11)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "12" onclick="makeGuess(12)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "13" onclick="makeGuess(13)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "14" onclick="makeGuess(14)" width="200" height ="200"></div>
     </div>
     <div class ="row container">
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "15" onclick="makeGuess(15)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "16" onclick="makeGuess(16)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "17" onclick="makeGuess(17)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "18" onclick="makeGuess(18)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "19" onclick="makeGuess(19)" width="200" height ="200"></div>
     </div>
     <div class ="row container">
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
-        <div class = "border"><img  src="book.jpg" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "20" onclick="makeGuess(20)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "21" onclick="makeGuess(21)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "22" onclick="makeGuess(22)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "23" onclick="makeGuess(23)" width="200" height ="200"></div>
+        <div class = "border"><img class="img-fluid" src="book.jpg" id = "24" onclick="makeGuess(24)" width="200" height ="200"></div>
     </div>
 </div>
-<br><br><br><br>
 
-    <script>
+<script>
+    var ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+    var clickCount=0;
+    var treasureLocation=18;
 
-        var ids = ["img0", "img1", "img2", "img3", "img4",
-            "img5", "img6", "img7", "img8", "img9",
-            "img10", "img11", "img12", "img13", "img14",
-            "img15", "img16", "img17", "img18", "img19",
-            "img20", "img21", "img22", "img23", "img24"];
-
-        var clickCount = 0;
-        var treasureLocation = 18;
-        var treasureLocation = getRandomIntInclusive(0, 24);
-        console.log(treasureLocation);
-
-        function getRandomIntInclusive(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1) + min); 
-        }
-        function newGame() {
-            var clickCount = 0;
-            var treasureLocation = getRandomIntInclusive(0, 24);
-            console.log(treasureLocation);
-            document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount + ".";
-
-            document.getElementById("distance").innerHTML = "Distance is unknown.";
-        }
-
-        function makeGuess(position) {
-
-            id = ids[position];
-            imageElement = document.getElementById(id);
-
-            if (position == treasureLocation) {
-                imageElement.src = "images/jewels image.jpg"
+    function makeGuess(position){
+        var id;
+        for(var i = 0; i < ids.length; i++){
+            if(position == i){
+                id = ids[i];
             }
-            else {
-                imageElement.src = "images/empty box.jpg"
-            }
-
-            clickCount++;
-
-            document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount + ".";
-
-            document.getElementById("distance").innerHTML = "Distance is " + distance(position, treasureLocation) + ".";
-
         }
 
-        function distance(pos1, pos2) {
+        if(id.localeCompare(treasureLocation)){
+            document.getElementById(id).src = "empty.png";
+        }
+        else{
+            document.getElementById(id).src = "jewel.jpg";     
+        }
 
-            var a =
-                [
-                    [0, 1, 2, 3, 4],
-                    [5, 6, 7, 8, 9],
-                    [10, 11, 12, 13, 14],
-                    [15, 16, 17, 18, 19],
-                    [20, 21, 22, 23, 24]
-                ]
+        clickCount = clickCount+1;
+        document.getElementById("clicks").innerHTML = "Number of clicks is " +clickCount;
+        var treasureDistance = distance(id, treasureLocation);
+        document.getElementById("distance").innerHTML = "Distance is " +treasureDistance;
+
+        function distance(pos1, pos2){
+            var grid =[[0, 1, 2, 3, 4],[5, 6, 7, 8, 9],[10, 11, 12, 13, 14],[15, 16, 17, 18, 19],[20, 21, 22, 23, 24]]
             var x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 
             for (var i = 0; i < 5; i++) {
-                for (var j = 0; j < 5; j++)
-                if (a[i][j] == pos1) {
-                    x1 = i;
-                    y1 = j;
-                    break;
+                for (var j = 0; j < 5; j++){
+                    if (grid[i][j] == pos1) {
+                        x1 = i;
+                        y1 = j;
+                        break;
+                    }
                 }
             }
+
 
             for (var i = 0; i < 5; i++) {
-                for (var j = 0; j < 5; j++)
-                if (a[i][j] == pos2) {
-                    x2 = i;
-                    y2 = j;
-                    break;
+                for (var j = 0; j < 5; j++){
+                    if (grid[i][j] == pos2) {
+                        x2 = i;
+                        y2 = j;
+                        break;
+                    }
                 }
             }
 
-            var dis = Math.abs(x2-x1) + Math.abs(y2-y1);
-            return dis;
-
+            var treasureDistance = Math.abs(x2-x1) + Math.abs(y2-y1);
+            return treasureDistance;
+        
         }
-    </script> 
+    }
+
+
+    
+</script>
+
+    
 	</body>
+
 	</html>	
